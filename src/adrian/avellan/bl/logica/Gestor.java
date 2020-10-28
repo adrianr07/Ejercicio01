@@ -9,8 +9,8 @@ public class Gestor {
 
     private ArrayList<Computadora> registros = new ArrayList<>();
 
-    public void registrarComputadora(Computadora nuevaComputadora){
-        Computadora nueva = new Computadora(nuevaComputadora);
+    public void registrarComputadora(String serie,String marca,Empleado nuevoEmpleado){
+        Computadora nueva = new Computadora(serie, marca, nuevoEmpleado);
         registros.add(nueva);
     }
 

@@ -57,14 +57,12 @@ public class Controlador {
         interfaz.imprimirMensaje("Ingrese la marca de la computadora asignada a este Empleado");
         String marca = interfaz.leerTexto();
 
-        Computadora nuevaComputadora = new Computadora(serie,marca, nuevoEmpleado);
-
-        registros.add(nuevaComputadora);
+        gestor.registrarComputadora(serie, marca, nuevoEmpleado);
 
     }
 
     public void listarRegistros(){
-        ArrayList<Computadora> lista = registros;
+        ArrayList<Computadora> lista = gestor.listarRegistros();
         interfaz.imprimirMensaje("Lista de Registros");
         for (int i = 0; i < lista.size(); i++) {
             interfaz.imprimirMensaje(lista.get(i).toString());
